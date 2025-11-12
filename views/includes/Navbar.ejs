@@ -1,0 +1,124 @@
+<div class="navdiv sticky-top">
+  <nav class="navbar navbar-expand-md bg-body-light border-bottom nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explore</a>
+        </div>
+        <div class=" ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 inp-search" type="search" placeholder="Search destinations"
+              aria-label="Search">
+            <button class="btn btn-search" type="submit"><i
+                class="fa-solid fa-magnifying-glass"></i>&nbsp;Search</button>
+          </form>
+        </div>
+        <div class="navbar-nav ms-auto categories">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/listings?category=Trending"><i class="fa-solid fa-fire"></i>&nbsp;
+                  Trending</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Room"><i class="fa-solid fa-bed"></i>&nbsp; Room</a>
+              </li>
+              <li><a class="dropdown-item" href="/listings?category=Iconic Cities"><i
+                    class="fa-solid fa-mountain-city"></i> &nbsp; Iconic Cities</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Mountains"><i
+                    class="fa-solid fa-mountain"></i>&nbsp; Mountains</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Castles"><i
+                    class="fa-brands fa-fort-awesome"></i>&nbsp; Castles</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Amazing Pools"><i
+                    class="fa-solid fa-person-swimming"></i>&nbsp; Amazing Pools</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Camping"><i
+                    class="fa-solid fa-campground"></i>&nbsp; Camping</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Farms"><i class="fa-solid fa-cow"></i>&nbsp;
+                  Farms</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Arctic"><i
+                    class="fa-regular fa-snowflake"></i>&nbsp; Arctic</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Domes"><i class="fa-solid fa-igloo"></i>&nbsp;
+                  Domes</a></li>
+              <li><a class="dropdown-item" href="/listings?category=Boats"><i class="fa-solid fa-sailboat"></i>&nbsp;
+                  Boats</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/listings"><i class="fa-solid"></i>&nbsp; All Categories</a></li>
+            </ul>
+          </li>
+
+        </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">Wanderlust Your Home</a>
+          <% if(!currUser) {%>
+            <a class="nav-link " href="/signup"> <span style="color:#fe424d;"><b>Sign Up</b></span></a>
+            <a class="nav-link" href="/login"><span style="color:#fe424d"><b>Log In</b></span></a>
+            <%}%>
+              <% if(currUser) {%>
+                <a class="nav-link" href="/logout">Log Out</a>
+                <%}%>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="filters" class="mt-3 ">
+    <a class="filter" href="/listings?category=Trending">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </a>
+    <a class="filter" href="/listings?category=Room">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Room</p>
+    </a>
+    <a class="filter" href="/listings?category=Iconic Cities">
+      <div><i class="fa-solid fa-mountain-city"></i></div>
+      <p>Iconic Cities</p>
+    </a>
+    <a class="filter" href="/listings?category=Mountains">
+      <div><i class="fa-solid fa-mountain"></i></div>
+      <p>Mountains</p>
+    </a>
+    <a class="filter" href="/listings?category=Castles">
+      <div><i class="fa-brands fa-fort-awesome"></i></div>
+      <p>Castles</p>
+    </a>
+    <a class="filter" href="/listings?category=Amazing Pools">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing Pools</p>
+    </a>
+    <a class="filter" href="/listings?category=Camping">
+      <div><i class="fa-solid fa-campground"></i></div>
+      <p>Camping</p>
+    </a>
+    <a class="filter" href="/listings?category=Farms">
+      <div><i class="fa-solid fa-cow"></i></div>
+      <p>Farms</p>
+    </a>
+    <a class="filter" href="/listings?category=Arctic">
+      <div><i class="fa-solid fa-snowflake"></i></div>
+      <p>Arctic</p>
+    </a>
+    <a class="filter" href="/listings?category=Domes">
+      <div><i class="fa-solid fa-igloo"></i></div>
+      <p>Domes</p>
+    </a>
+    <a class="filter" href="/listings?category=Boats">
+      <div><i class="fa-solid fa-sailboat"></i></div>
+      <p>Boats</p>
+    </a>
+
+    <div class="tax-toggle">
+      <div class="form-check form-check-reverse form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+      </div>
+    </div>
+  </div>
+</div>

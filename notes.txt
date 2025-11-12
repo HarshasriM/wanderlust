@@ -1,0 +1,56 @@
+
+MODEL : LISTING -- place(house,hotel,apartment)
+    >title       ---String
+    >description ---String
+    >image (URL) ---String
+    >price       ---number
+    >location    ---String
+    >country     ---String
+
+data.js --data created by the chatgpt
+init folder -- used to initialze database with data
+&#8377; -- ruppee symbol
+num.toLocaleString(location)--is a function to format numbers based on locality
+name="listing[title]" -- it creates a listing object with title as key in the form
+
+Index Route :
+GET /listing -- return all listings
+Show Route:
+GET /listing/:id -- show specific listing data
+New & Create Route:
+    New Route:
+        GET /listings/new --Form page is open after submit it goes to Create Route
+    Create Route:
+        POST /listings -- to store in database
+Edit & Update Route:
+    Edit Route:
+        GET /listings/:id/edit -- render a Form after submit it goes to update Route
+    Update Route:
+        PUT /listings/:id -- to update in database
+Delete Route:
+    Delete Route:
+        DELETE /Listings/:id -- to delete in database
+
+
+
+New Package
+EJS mate -- to style our ejs templates --create layouts
+npm i ejs-mate
+const ejsMate = require("ejs-mate");
+app.engine("ejs",ejsMate)
+Do another folder in views called layouts(templates)
+It is used in using layouts--- avoid repeating the code of common things in every page
+Ex - navbar is used in every page we just include/partials them into our page rather than writing code again
+
+
+boilerplate.ejs --- first code part in every page
+
+here layout means template is same but we change the content over it
+to include our template we use <% layout(filename) -%>
+to change content in it we use <% - tagname -%>
+
+layouts(templates) are different from includes ( files having code of repeating component in webpage)
+
+
+
+often we should make our code moduler by splitting code into different files
